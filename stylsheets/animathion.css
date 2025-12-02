@@ -1,0 +1,103 @@
+@keyframes showHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hand {
+  animation: showHand 0.5s ease-in 2s forwards;
+}
+
+.letter:nth-child(1) {
+  --random-x: 0.1;
+  --random-y: 0.5;
+  --random-rotation: 0.3;
+}
+.letter:nth-child(2) {
+  --random-x: 0.8;
+  --random-y: 0.2;
+  --random-rotation: 0.7;
+}
+.letter:nth-child(3) {
+  --random-x: 0.4;
+  --random-y: 0.9;
+  --random-rotation: 0.2;
+}
+.letter:nth-child(4) {
+  --random-x: 0.7;
+  --random-y: 0.6;
+  --random-rotation: 0.5;
+}
+.letter:nth-child(5) {
+  --random-x: 0.3;
+  --random-y: 0.3;
+  --random-rotation: 0.9;
+}
+.letter:nth-child(6) {
+  --random-x: 0.6;
+  --random-y: 0.8;
+  --random-rotation: 0.1;
+}
+.letter:nth-child(7) {
+  --random-x: 0.2;
+  --random-y: 0.7;
+  --random-rotation: 0.4;
+}
+.letter:nth-child(8) {
+  --random-x: 0.9;
+  --random-y: 0.4;
+  --random-rotation: 0.8;
+}
+.letter:nth-child(9) {
+  --random-x: 0.5;
+  --random-y: 0.1;
+  --random-rotation: 0.6;
+}
+.letter:nth-child(10) {
+  --random-x: 0.7;
+  --random-y: 0.5;
+  --random-rotation: 0.2;
+}
+.letter:nth-child(11) {
+  --random-x: 0.3;
+  --random-y: 0.9;
+  --random-rotation: 0.7;
+}
+.letter:nth-child(12) {
+  --random-x: 0.8;
+  --random-y: 0.3;
+  --random-rotation: 0.3;
+}
+.letter:nth-child(13) {
+  --random-x: 0.6;
+  --random-y: 0.6;
+  --random-rotation: 0.5;
+}
+.letter:nth-child(14) {
+  --random-x: 0.4;
+  --random-y: 0.2;
+  --random-rotation: 0.9;
+}
+.letter:nth-child(15) {
+  --random-x: 0.9;
+  --random-y: 0.7;
+  --random-rotation: 0.1;
+}
+
+.letter {
+  animation: scatterLetters 1s ease-out 3s forwards;
+}
+
+@keyframes scatterLetters {
+  to {
+    transform: translate(
+        calc(-50vw + var(--random-x) * 100vw),
+        calc(-50vh + var(--random-y) * 100vh)
+      )
+      rotate(calc(var(--random-rotation) * 360deg));
+    opacity: 0;
+  }
+}
