@@ -3,43 +3,126 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #000;
-  overflow: hidden;
+  overflow-x: hidden;
 }
+
 body {
   font-family: "Roboto Flex", sans-serif;
-}
-
-.animation-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-container {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+}
+
+#marquee {
+  width: 100vw;
+  min-height: 9vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.marquee1 p {
+  animation: marquee 20s linear infinite;
+  color: #000000;
+  font-size: 5vw;
+  font-weight: 650;
+}
+
+span {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+span::after {
+  content: "";
+  position: absolute;
+  width: 20vw;
+  height: 22vw;
+  top: -1vw;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.word-people:hover::after {
+  opacity: 1;
+  background-image: url("../images/word-people.png");
+}
+
+.word-fight:hover::after {
+  opacity: 1;
+  background-image: url("../images/word-roosters.svg");
+}
+
+.word-roosters:hover::after {
+  opacity: 1;
+  background-image: url("../images/word-roosters.svg");
+}
+
+.word-watch:hover::after {
+  opacity: 1;
+  background-image: url("../images/word-roosters.svg");
+}
+
+.marquee1 p:hover {
+  animation-play-state: paused;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -1vw;
+  padding-bottom: 2vw;
 }
 
 .text-line {
   display: flex;
+  margin-bottom: -3vw;
+}
+.text-line:nth-child(1) {
+  margin-top: 10vw;
+}
+
+.text-line:nth-child(2) .letter {
+  font-size: 20.7vw;
+}
+
+.text-line:nth-child(3) {
+  margin-bottom: 10vw;
+}
+.text-line:nth-child(3) .letter {
+  font-size: 20.5vw;
 }
 
 .letter {
-  font-size: 20vw;
+  font-size: 19vw;
   font-weight: 800;
   color: #d1293c;
   margin: 0.2vw;
   display: inline-block;
   opacity: 1;
+}
+
+.animation-section {
+  width: 100vw;
+  min-height: 58vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hand {
@@ -48,9 +131,77 @@ body {
   background-image: url("../images/kulak.png");
   background-size: contain;
   background-repeat: no-repeat;
-  position: fixed;
-  top: 14vw;
-  left: 0;
+  position: absolute;
+  top: 7vw;
+  left: -7vw;
   z-index: 10;
   opacity: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.new-section {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+.block-left {
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+  background-color: #d1293c;
+}
+
+.hover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.block-left:hover .hover-image {
+  opacity: 0;
+}
+
+.block-left:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/second.svg");
+  background-size: cover;
+  opacity: 1;
+}
+
+.block-right {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../images/peria.svg");
+  background-size: cover;
+  background-position: center -8vw;
+}
+
+.block-right::before,
+.block-right::after {
+  content: "";
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  background-image: url("../images/falling-feathers.svg");
+  background-size: contain;
+  z-index: 1;
+  animation: falling 5s linear infinite;
+}
+
+.block-right::before {
+  left: 20%;
+}
+
+.block-right::after {
+  left: 60%;
 }
