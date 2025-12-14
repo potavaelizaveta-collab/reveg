@@ -148,16 +148,32 @@ span::after {
 
 .block-left {
   width: 60%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   background-color: #d1293c;
+}
+
+.block-left::after {
+  content: "";
+  position: absolute;
+  top: 5vw;
+  left: 13vw;
+  width: 32vw;
+  height: 35vw;
+  background-image: url("../images/rotate.svg");
+  background-size: cover;
+  z-index: 0;
+  animation: rotate 3s linear infinite;
 }
 
 .hover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .block-left:hover .hover-image {
@@ -174,6 +190,7 @@ span::after {
   background-image: url("../images/second.svg");
   background-size: cover;
   opacity: 1;
+  z-index: 2;
 }
 
 .block-right {
@@ -186,22 +203,187 @@ span::after {
   background-position: center -8vw;
 }
 
-.block-right::before,
-.block-right::after {
+.feathers::before {
+  width: 5vw;
   content: "";
   position: absolute;
-  width: 10vw;
+  top: -10vw;
+  width: 13.5vw;
   height: 10vw;
   background-image: url("../images/falling-feathers.svg");
   background-size: contain;
-  z-index: 1;
+  z-index: 10;
   animation: falling 5s linear infinite;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
-.block-right::before {
-  left: 20%;
+.feathers-1::before {
+  left: 2%;
+  animation-delay: 0s;
+}
+.feathers-2::before {
+  left: 15%;
+  animation-delay: 2.5s;
+}
+.feathers-3::before {
+  left: 25%;
+  animation-delay: 1.5s;
+}
+.feathers-4::before {
+  left: 35%;
+  animation-delay: 3s;
+}
+.feathers-5::before {
+  left: 45%;
+  animation-delay: 1s;
+}
+.feathers-6::before {
+  left: 55%;
+  animation-delay: 0.5s;
+}
+.feathers-7::before {
+  left: 65%;
+  animation-delay: 4s;
+}
+.feathers-8::before {
+  left: 75%;
+  animation-delay: 2s;
+}
+.feathers-9::before {
+  left: 85%;
+  animation-delay: 3s;
+}
+.feathers-10::before {
+  left: 95%;
+  animation-delay: 0.5s;
 }
 
-.block-right::after {
-  left: 60%;
+.deform-explode-section {
+  display: flex;
+  width: 100%;
+  min-height: 43vw !important;
+}
+
+.block-left2 {
+  width: 60%;
+  height: 100% !important;
+  min-height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.block-right2 {
+  width: 40%;
+  height: 100% !important;
+  min-height: 100% !important;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.deform-text-line {
+  margin: 1vw 0;
+  font-weight: bold;
+  font-size: 8vw;
+  color: white;
+  text-align: center;
+}
+
+.fist-fist-left,
+.fist-fist-right {
+  position: absolute;
+  width: 28vw;
+  height: 28vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.fist-fist-left {
+  top: -26vw;
+  left: 20vw;
+  background-image: url("../images/first-kulak.svg");
+  animation: fist-slide1 2s linear infinite;
+}
+
+.fist-fist-right {
+  top: 42vw;
+  bottom: 0;
+  background-image: url("../images/second-kulak.svg");
+  animation-delay: 2s;
+  animation: fist-slide2 2s linear infinite;
+}
+
+@keyframes fist-slide1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 26vw);
+  }
+  0% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fist-slide2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -23vw);
+  }
+  0% {
+    transform: translate(0, 0);
+  }
+}
+
+.explosion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36vw;
+  height: 42vw;
+  background-image: url("../images/boom.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 1;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes explosion-appear {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  20% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  30% {
+    opacity: 1;
+    width: 30vw;
+    height: 30vw;
+  }
+  40% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 }
