@@ -14,6 +14,91 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+.hand {
+  animation: showHand 0.6s ease-out 1s forwards;
+  opacity: 0;
+  transform: translate(-100vw, 100vh);
+}
+
+.letter {
+  animation: scatterLetters 4s ease-in-out 1.5s forwards;
+}
+
+.letter:nth-child(1) {
+  --random-x: 0.1;
+  --random-y: 0.5;
+  --random-rotation: 0.3;
+}
+.letter:nth-child(2) {
+  --random-x: 0.8;
+  --random-y: 0.2;
+  --random-rotation: 0.7;
+}
+.letter:nth-child(3) {
+  --random-x: 0.4;
+  --random-y: 0.9;
+  --random-rotation: 0.2;
+}
+.letter:nth-child(4) {
+  --random-x: 0.7;
+  --random-y: 0.6;
+  --random-rotation: 0.5;
+}
+.letter:nth-child(5) {
+  --random-x: 0.3;
+  --random-y: 0.3;
+  --random-rotation: 0.9;
+}
+.letter:nth-child(6) {
+  --random-x: 0.6;
+  --random-y: 0.8;
+  --random-rotation: 0.1;
+}
+.letter:nth-child(7) {
+  --random-x: 0.2;
+  --random-y: 0.7;
+  --random-rotation: 0.4;
+}
+.letter:nth-child(8) {
+  --random-x: 0.9;
+  --random-y: 0.4;
+  --random-rotation: 0.8;
+}
+.letter:nth-child(9) {
+  --random-x: 0.5;
+  --random-y: 0.1;
+  --random-rotation: 0.6;
+}
+.letter:nth-child(10) {
+  --random-x: 0.7;
+  --random-y: 0.5;
+  --random-rotation: 0.2;
+}
+.letter:nth-child(11) {
+  --random-x: 0.3;
+  --random-y: 0.9;
+  --random-rotation: 0.7;
+}
+.letter:nth-child(12) {
+  --random-x: 0.8;
+  --random-y: 0.3;
+  --random-rotation: 0.3;
+}
+.letter:nth-child(13) {
+  --random-x: 0.6;
+  --random-y: 0.6;
+  --random-rotation: 0.5;
+}
+.letter:nth-child(14) {
+  --random-x: 0.4;
+  --random-y: 0.2;
+  --random-rotation: 0.9;
+}
+.letter:nth-child(15) {
+  --random-x: 0.9;
+  --random-y: 0.7;
+  --random-rotation: 0.1;
+}
 
 #marquee {
   width: 100vw;
@@ -321,69 +406,39 @@ span::after {
   animation: fist-slide2 2s linear infinite;
 }
 
-@keyframes fist-slide1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, 26vw);
-  }
-  0% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes fist-slide2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, -23vw);
-  }
-  0% {
-    transform: translate(0, 0);
-  }
-}
-
 .explosion {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 36vw;
+  width: 34vw;
   height: 42vw;
+  left: 3vw;
   background-image: url("../images/boom.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0;
   z-index: 1;
   animation: rotate 4s linear infinite;
 }
 
-@keyframes explosion-appear {
-  0% {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  20% {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  30% {
-    opacity: 1;
-    width: 30vw;
-    height: 30vw;
-  }
-  40% {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  100% {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+.bird-section {
+  width: 100vw;
+  height: auto;
+}
+
+.bird-container {
+  width: 100vw;
+  height: 25vw;
+  position: relative;
+  background-color: #d1293c;
+  overflow: hidden;
+}
+
+.bird {
+  width: 25vw;
+  height: 25vw;
+  background-image: url("../images/bird-walk.svg");
+  background-repeat: no-repeat;
+  background-size: 150vw auto;
+  position: relative;
+  z-index: 2;
+  left: 0;
+  animation: birdWalk 0.8s infinite steps(1), birdMove 6s infinite linear;
 }
