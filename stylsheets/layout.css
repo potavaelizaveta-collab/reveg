@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #000;
+  background-color: white;
   overflow-x: hidden;
 }
 
@@ -112,9 +112,9 @@ body {
 }
 
 .marquee1 p {
-  animation: marquee 20s linear infinite;
+  animation: marquee 5s linear infinite;
   color: #000000;
-  font-size: 5vw;
+  font-size: 5.6vw;
   font-weight: 650;
 }
 
@@ -208,12 +208,13 @@ span::after {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-color: #000000;
 }
 
 .hand {
   width: 80vw;
   height: 80vh;
-  background-image: url("../images/kulak.png");
+  background-image: url("../images/kulak1.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -352,8 +353,7 @@ span::after {
 
 .block-left2 {
   width: 60%;
-  height: 100% !important;
-  min-height: 100% !important;
+  height: 43vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -362,6 +362,133 @@ span::after {
   font-size: 3vw;
   font-weight: bold;
   text-align: center;
+  padding: 2vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.deform-text-line1 {
+  font-size: 5vw;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  margin: 2vw 0;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deform-letter {
+  display: inline-block;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  transform-origin: center;
+}
+
+.line1 .deform-letter {
+  animation: scaleLetterTop 3s ease-in-out infinite;
+}
+
+.line2 .deform-letter {
+  animation: scaleLetterBottom 3s ease-in-out infinite;
+}
+
+.line1 .deform-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.line1 .deform-letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.line1 .deform-letter:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.line1 .deform-letter:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.line1 .deform-letter:nth-child(6) {
+  animation-delay: 0.8s;
+}
+.line1 .deform-letter:nth-child(7) {
+  animation-delay: 1s;
+}
+.line1 .deform-letter:nth-child(8) {
+  animation-delay: 1.2s;
+}
+.line1 .deform-letter:nth-child(9) {
+  animation-delay: 1.4s;
+}
+.line1 .deform-letter:nth-child(10) {
+  animation-delay: 1.6s;
+}
+.line1 .deform-letter:nth-child(11) {
+  animation-delay: 1.8s;
+}
+.line1 .deform-letter:nth-child(12) {
+  animation-delay: 2s;
+}
+.line1 .deform-letter:nth-child(13) {
+  animation-delay: 2.2s;
+}
+
+.line2 .deform-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.line2 .deform-letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.line2 .deform-letter:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.line2 .deform-letter:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.line2 .deform-letter:nth-child(6) {
+  animation-delay: 0.8s;
+}
+.line2 .deform-letter:nth-child(7) {
+  animation-delay: 1s;
+}
+.line2 .deform-letter:nth-child(8) {
+  animation-delay: 1.2s;
+}
+.line2 .deform-letter:nth-child(9) {
+  animation-delay: 1.4s;
+}
+.line2 .deform-letter:nth-child(10) {
+  animation-delay: 1.6s;
+}
+.line2 .deform-letter:nth-child(11) {
+  animation-delay: 1.8s;
+}
+.line2 .deform-letter:nth-child(12) {
+  animation-delay: 2s;
+}
+.line2 .deform-letter:nth-child(13) {
+  animation-delay: 2.2s;
+}
+
+@keyframes scaleLetterTop {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 6);
+  }
+}
+
+@keyframes scaleLetterBottom {
+  0%,
+  100% {
+    transform: scale(1, 6);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
 }
 
 .block-right2 {
@@ -408,14 +535,14 @@ span::after {
 
 .explosion {
   position: absolute;
-  width: 34vw;
-  height: 42vw;
-  left: 3vw;
-  background-image: url("../images/boom.svg");
+  width: 40vw;
+  height: 45vw;
+  left: 1vw;
+  background-image: url("../images/boomm.svg");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
-  animation: rotate 4s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
 .bird-section {
@@ -425,7 +552,7 @@ span::after {
 
 .bird-container {
   width: 100vw;
-  height: 25vw;
+  height: 23vw;
   position: relative;
   background-color: #d1293c;
   overflow: hidden;
@@ -440,5 +567,116 @@ span::after {
   position: relative;
   z-index: 2;
   left: 0;
-  animation: birdWalk 0.8s infinite steps(1), birdMove 6s infinite linear;
+  animation: birdWalk 0.8s infinite steps(1), birdMove 4s infinite linear;
+}
+
+.hover-image-section {
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+.hover-image-container {
+  width: 100vw;
+  height: 100vw;
+  max-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.changeable-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+}
+
+.default-image {
+  opacity: 1;
+}
+
+.hover-image1 {
+  opacity: 0;
+}
+
+.hover-image-container:hover .default-image {
+  opacity: 0;
+}
+
+.hover-image-container:hover .hover-image1 {
+  opacity: 1;
+}
+
+.footer-section {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.footer-text {
+  position: relative;
+  z-index: 2;
+  color: #d1293c;
+  font-family: "Roboto Flex", sans-serif;
+  left: 4vw;
+  top: 5.8vw;
+  font-size: 5vw;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.feather {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+  z-index: 3;
+}
+
+.feather-1 {
+  background-image: url("../images/pero1.svg");
+  width: 20vw;
+  height: 20vw;
+  top: 5vw;
+  left: 2vw;
+  transform: translateX(0) translateY(0);
+}
+
+.feather-2 {
+  background-image: url("../images/pero2.svg");
+  width: 17vw;
+  height: 17vw;
+  top: 9.5vw;
+  left: 18vw;
+  transform: translateX(0) translateY(0);
+}
+
+.feather-3 {
+  background-image: url("../images/pero3.svg");
+  width: 9vw;
+  height: 9vw;
+  top: 9vw;
+  left: 37vw;
+  transform: translateX(0) translateY(0);
+}
+
+.footer-text:hover ~ .feather-1 {
+  transform: translateX(-10vw) translateY(-5vw);
+}
+
+.footer-text:hover ~ .feather-2 {
+  transform: translateX(10vw) translateY(5vw);
+}
+
+.footer-text:hover ~ .feather-3 {
+  transform: translateX(5vw) translateY(-10vw);
 }
