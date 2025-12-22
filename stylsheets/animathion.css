@@ -155,3 +155,24 @@
     margin-left: 100vw;
   }
 }
+
+
+@keyframes scaleLetterTop {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 6);
+  }
+}
+
+@keyframes scaleLetterBottom {
+  0%,
+  100% {
+    transform: scale(1, 6);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+}

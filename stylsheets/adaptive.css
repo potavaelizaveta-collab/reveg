@@ -1,0 +1,239 @@
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .animation-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 170vw;
+    height: auto;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .hand {
+    position: absolute;
+    top: 81vw;
+    left: 65%;
+    transform: translateX(-50%) rotate(-72deg) !important;
+    height: 115vw;
+    width: 100vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  .text-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    position: relative;
+  }
+
+  .text-line {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .letter {
+    font-size: 22vw;
+    display: inline-block;
+  }
+
+  .text-line:nth-child(2) .letter,
+  .text-line:nth-child(3) .letter {
+    font-size: 24vw !important;
+  }
+
+  #marquee {
+    width: 100vw;
+    min-height: 11vw;
+  }
+
+  .marquee1 p {
+    font-size: 10vw;
+    margin: 1vw;
+  }
+
+  span::after {
+    content: "";
+    position: absolute;
+    width: 30vw;
+    height: 22vw;
+    top: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  .new-section {
+    height: auto;
+  }
+
+  .block-left {
+    width: 100%;
+    height: 70vw;
+  }
+
+  .hover-image {
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .block-left::after {
+    content: "";
+    position: absolute;
+    top: 9vw;
+    left: 25vw;
+    width: 50vw;
+    height: 54vw;
+  }
+
+  .block-right {
+    width: 100%;
+    height: 120vw;
+  }
+
+  .feathers::before {
+    width: 20vw;
+    height: 10vw;
+  }
+
+  .bird-section {
+    width: 100%;
+    margin: 72vw 0 0;
+  }
+
+  .hover-image-section {
+    width: 100%;
+  }
+
+  .hover-image-container {
+    width: 100%;
+    height: 80vw;
+  }
+
+  .footer-text {
+    position: relative;
+    width: 100%;
+  }
+
+  .deform-explode-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Секции */
+  .new-section,
+  .deform-explode-section {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Левая секция */
+  .block-left,
+  .block-left2 {
+    width: 100% !important;
+    height: auto !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    margin: 5px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    max-width: none !important;
+    min-width: 100% !important;
+  }
+
+  .block-left2 {
+    width: 100% !important;
+    height: 70vw !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    margin: 5px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    max-width: none !important;
+    min-width: 100% !important;
+  }
+
+  .block-right2 {
+    width: 100%;
+  }
+  .fist-fist-left {
+    top: -35vw;
+    left: 60vw;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .fist-fist-right {
+    top: 30vw;
+    bottom: 0;
+    width: 40vw;
+    height: 50vw;
+  }
+  .deform-text-line1 {
+    font-size: 8vw;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.1vw;
+    height: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 11vw 0 0;
+    padding: 3vw;
+  }
+
+  .explosion {
+    position: absolute;
+    width: 45vw;
+    height: 50vw;
+    left: 25vw;
+    top: -2vw;
+  }
+}

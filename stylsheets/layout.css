@@ -13,6 +13,11 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+  overflow-x: hidden;
 }
 .hand {
   animation: showHand 0.6s ease-out 1s forwards;
@@ -353,7 +358,6 @@ span::after {
 
 .block-left2 {
   width: 60%;
-  height: 43vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -373,12 +377,13 @@ span::after {
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
-  letter-spacing: 0.1em;
-  margin: 2vw 0;
+  letter-spacing: 0.1vw;
   height: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2vw 0;
+  padding: 1vw;
 }
 
 .deform-letter {
@@ -469,26 +474,6 @@ span::after {
 }
 .line2 .deform-letter:nth-child(13) {
   animation-delay: 2.2s;
-}
-
-@keyframes scaleLetterTop {
-  0%,
-  100% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1, 6);
-  }
-}
-
-@keyframes scaleLetterBottom {
-  0%,
-  100% {
-    transform: scale(1, 6);
-  }
-  50% {
-    transform: scale(1, 1);
-  }
 }
 
 .block-right2 {
@@ -672,11 +657,9 @@ span::after {
 .footer-text:hover ~ .feather-1 {
   transform: translateX(-10vw) translateY(-5vw);
 }
-
 .footer-text:hover ~ .feather-2 {
   transform: translateX(10vw) translateY(5vw);
 }
-
 .footer-text:hover ~ .feather-3 {
   transform: translateX(5vw) translateY(-10vw);
 }
