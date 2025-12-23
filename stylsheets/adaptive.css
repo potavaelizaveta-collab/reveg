@@ -70,13 +70,12 @@
   }
 
   #marquee {
-    width: 100vw;
-    min-height: 11vw;
+    width: 100%;
+    min-height: 19vw;
   }
 
   .marquee1 p {
-    font-size: 10vw;
-    margin: 1vw;
+    font-size: 18vw;
   }
 
   span::after {
@@ -133,7 +132,7 @@
 
   .bird-section {
     width: 100%;
-    margin: 72vw 0 0;
+    margin: 71vw 0 0;
   }
 
   .hover-image-section {
@@ -159,7 +158,6 @@
     padding: 0;
   }
 
-  /* Секции */
   .new-section,
   .deform-explode-section {
     width: 100% !important;
@@ -170,32 +168,12 @@
     padding: 0 !important;
   }
 
-  /* Левая секция */
-  .block-left,
   .block-left2 {
-    width: 100% !important;
-    height: auto !important;
-    flex: none !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    margin: 5px 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    max-width: none !important;
-    min-width: 100% !important;
-  }
-
-  .block-left2 {
-    width: 100% !important;
-    height: 70vw !important;
-    flex: none !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    margin: 5px 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    max-width: none !important;
-    min-width: 100% !important;
+    width: 100%;
+    height: 70vw;
+    flex: none;
+    display: block;
+    min-width: 100%;
   }
 
   .block-right2 {
@@ -215,18 +193,10 @@
     height: 50vw;
   }
   .deform-text-line1 {
-    font-size: 8vw;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    letter-spacing: 0.1vw;
-    height: 12vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 11vw 0 0;
-    padding: 3vw;
+    font-size: 7vw;
+    font-weight: 950;
+    height: 3vw;
+    margin: 19vw 0 0;
   }
 
   .explosion {
