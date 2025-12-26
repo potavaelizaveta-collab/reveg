@@ -17,7 +17,7 @@
     padding: 0;
   }
 
-  .animation-section {
+  .first-section {
     position: relative;
     overflow: hidden;
     min-height: 170vw;
@@ -30,12 +30,28 @@
     position: absolute;
     top: 81vw;
     left: 65%;
-    transform: translateX(-50%) rotate(-72deg) !important;
+    transform: translateX(-50%) translateY(100vh) rotate(-72deg);
     height: 115vw;
     width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 0;
+    animation: showHandMobile 1.5s ease-out forwards;
+  }
+
+  @keyframes showHandMobile {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100vh) rotate(-72deg);
+    }
+    70% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(100vh) rotate(-72deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) rotate(-72deg);
+    }
   }
 
   .text-container {
@@ -69,20 +85,22 @@
     font-size: 24vw !important;
   }
 
-  #marquee {
+  .second-section {
     width: 100%;
     min-height: 19vw;
   }
 
   .marquee1 p {
     font-size: 18vw;
+    animation: marquee 2s linear infinite;
+    padding: 1vw;
   }
 
   span::after {
     content: "";
     position: absolute;
-    width: 30vw;
-    height: 22vw;
+    width: 45vw;
+    height: 30vw;
     top: 1vw;
     left: 50%;
     transform: translateX(-50%);
@@ -94,7 +112,7 @@
     z-index: 10;
   }
 
-  .new-section {
+  .third-section {
     height: auto;
   }
 
@@ -125,17 +143,26 @@
     height: 120vw;
   }
 
-  .feathers::before {
+  .feathers1::before,
+  .feathers2::before,
+  .feathers3::before,
+  .feathers4::before,
+  .feathers5::before,
+  .feathers6::before,
+  .feathers7::before,
+  .feathers8::before,
+  .feathers9::before,
+  .feathers10::before {
     width: 20vw;
     height: 10vw;
   }
 
-  .bird-section {
+  .fifth-section {
     width: 100%;
-    margin: 71vw 0 0;
+    margin: 70vw 0 0;
   }
 
-  .hover-image-section {
+  .sixth-section {
     width: 100%;
   }
 
@@ -149,7 +176,7 @@
     width: 100%;
   }
 
-  .deform-explode-section {
+  .fourth-section {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -158,8 +185,8 @@
     padding: 0;
   }
 
-  .new-section,
-  .deform-explode-section {
+  .third-section,
+  .fourth-section {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
@@ -192,7 +219,8 @@
     width: 40vw;
     height: 50vw;
   }
-  .deform-text-line1 {
+  .deform-text-line1-deform-line1,
+  .deform-text-line1-deform-line2 {
     font-size: 7vw;
     font-weight: 950;
     height: 3vw;

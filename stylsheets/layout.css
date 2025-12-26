@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fira+Code:wght@300..700&family=Poiret+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Rubik+Bubbles&family=Rubik+Mono+One&display=swap");
+
 body,
 html {
   margin: 0;
@@ -19,6 +21,7 @@ body {
   background-color: white;
   overflow-x: hidden;
 }
+
 .hand {
   animation: showHand 0.6s ease-out 1s forwards;
   opacity: 0;
@@ -105,7 +108,7 @@ body {
   --random-rotation: 0.1;
 }
 
-#marquee {
+.second-section {
   width: 100vw;
   min-height: 9vw;
   background-color: white;
@@ -117,7 +120,7 @@ body {
 }
 
 .marquee1 p {
-  animation: marquee 5s linear infinite;
+  animation: marquee 2s linear infinite;
   color: #000000;
   font-size: 5.6vw;
   font-weight: 650;
@@ -205,7 +208,7 @@ span::after {
   opacity: 1;
 }
 
-.animation-section {
+.first-section {
   width: 100vw;
   min-height: 58vw;
   display: flex;
@@ -231,7 +234,7 @@ span::after {
   max-height: 100%;
 }
 
-.new-section {
+.third-section {
   display: flex;
   width: 100%;
   height: 90vh;
@@ -294,7 +297,16 @@ span::after {
   background-position: center -8vw;
 }
 
-.feathers::before {
+.feathers1::before,
+.feathers2::before,
+.feathers3::before,
+.feathers4::before,
+.feathers5::before,
+.feathers6::before,
+.feathers7::before,
+.feathers8::before,
+.feathers9::before,
+.feathers10::before {
   width: 5vw;
   content: "";
   position: absolute;
@@ -309,48 +321,48 @@ span::after {
   pointer-events: none;
 }
 
-.feathers-1::before {
+.feathers1::before {
   left: 2%;
   animation-delay: 0s;
 }
-.feathers-2::before {
+.feathers2::before {
   left: 15%;
   animation-delay: 2.5s;
 }
-.feathers-3::before {
+.feathers3::before {
   left: 25%;
   animation-delay: 1.5s;
 }
-.feathers-4::before {
+.feathers4::before {
   left: 35%;
   animation-delay: 3s;
 }
-.feathers-5::before {
+.feathers5::before {
   left: 45%;
   animation-delay: 1s;
 }
-.feathers-6::before {
+.feathers6::before {
   left: 55%;
   animation-delay: 0.5s;
 }
-.feathers-7::before {
+.feathers7::before {
   left: 65%;
   animation-delay: 4s;
 }
-.feathers-8::before {
+.feathers8::before {
   left: 75%;
   animation-delay: 2s;
 }
-.feathers-9::before {
+.feathers9::before {
   left: 85%;
   animation-delay: 3s;
 }
-.feathers-10::before {
+.feathers10::before {
   left: 95%;
   animation-delay: 0.5s;
 }
 
-.deform-explode-section {
+.fourth-section {
   display: flex;
   width: 100%;
   min-height: 43vw !important;
@@ -371,7 +383,8 @@ span::after {
   overflow: hidden;
 }
 
-.deform-text-line1 {
+.deform-text-line1-deform-line1,
+.deform-text-line1-deform-line2 {
   font-size: 5vw;
   color: white;
   font-weight: bold;
@@ -394,85 +407,85 @@ span::after {
   transform-origin: center;
 }
 
-.line1 .deform-letter {
+.deform-text-line1-deform-line1 .deform-letter {
   animation: scaleLetterTop 3s ease-in-out infinite;
 }
 
-.line2 .deform-letter {
+.deform-text-line1-deform-line2 .deform-letter {
   animation: scaleLetterBottom 3s ease-in-out infinite;
 }
 
-.line1 .deform-letter:nth-child(1) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(1) {
   animation-delay: 0s;
 }
-.line1 .deform-letter:nth-child(2) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(2) {
   animation-delay: 0.2s;
 }
-.line1 .deform-letter:nth-child(3) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(3) {
   animation-delay: 0.4s;
 }
-.line1 .deform-letter:nth-child(5) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(5) {
   animation-delay: 0.6s;
 }
-.line1 .deform-letter:nth-child(6) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(6) {
   animation-delay: 0.8s;
 }
-.line1 .deform-letter:nth-child(7) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(7) {
   animation-delay: 1s;
 }
-.line1 .deform-letter:nth-child(8) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(8) {
   animation-delay: 1.2s;
 }
-.line1 .deform-letter:nth-child(9) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(9) {
   animation-delay: 1.4s;
 }
-.line1 .deform-letter:nth-child(10) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(10) {
   animation-delay: 1.6s;
 }
-.line1 .deform-letter:nth-child(11) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(11) {
   animation-delay: 1.8s;
 }
-.line1 .deform-letter:nth-child(12) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(12) {
   animation-delay: 2s;
 }
-.line1 .deform-letter:nth-child(13) {
+.deform-text-line1-deform-line1 .deform-letter:nth-child(13) {
   animation-delay: 2.2s;
 }
 
-.line2 .deform-letter:nth-child(1) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(1) {
   animation-delay: 0s;
 }
-.line2 .deform-letter:nth-child(2) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(2) {
   animation-delay: 0.2s;
 }
-.line2 .deform-letter:nth-child(3) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(3) {
   animation-delay: 0.4s;
 }
-.line2 .deform-letter:nth-child(5) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(5) {
   animation-delay: 0.6s;
 }
-.line2 .deform-letter:nth-child(6) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(6) {
   animation-delay: 0.8s;
 }
-.line2 .deform-letter:nth-child(7) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(7) {
   animation-delay: 1s;
 }
-.line2 .deform-letter:nth-child(8) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(8) {
   animation-delay: 1.2s;
 }
-.line2 .deform-letter:nth-child(9) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(9) {
   animation-delay: 1.4s;
 }
-.line2 .deform-letter:nth-child(10) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(10) {
   animation-delay: 1.6s;
 }
-.line2 .deform-letter:nth-child(11) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(11) {
   animation-delay: 1.8s;
 }
-.line2 .deform-letter:nth-child(12) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(12) {
   animation-delay: 2s;
 }
-.line2 .deform-letter:nth-child(13) {
+.deform-text-line1-deform-line2 .deform-letter:nth-child(13) {
   animation-delay: 2.2s;
 }
 
@@ -483,14 +496,6 @@ span::after {
   position: relative;
   background-color: #ffffff;
   overflow: hidden;
-}
-
-.deform-text-line {
-  margin: 1vw 0;
-  font-weight: bold;
-  font-size: 8vw;
-  color: white;
-  text-align: center;
 }
 
 .fist-fist-left,
@@ -530,7 +535,7 @@ span::after {
   animation: rotate 2s linear infinite;
 }
 
-.bird-section {
+.fifth-section {
   width: 100vw;
   height: auto;
 }
@@ -555,7 +560,7 @@ span::after {
   animation: birdWalk 0.8s infinite steps(1), birdMove 4s infinite linear;
 }
 
-.hover-image-section {
+.sixth-section {
   height: auto;
   justify-content: center;
   align-items: center;
@@ -619,7 +624,9 @@ span::after {
   font-weight: 700;
 }
 
-.feather {
+.feather1,
+.feather2,
+.feather3 {
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
@@ -627,39 +634,39 @@ span::after {
   z-index: 3;
 }
 
-.feather-1 {
+.feather1 {
   background-image: url("../images/pero1.svg");
   width: 20vw;
   height: 20vw;
-  top: 5vw;
-  left: 2vw;
+  top: 0vw;
+  left: -3vw;
   transform: translateX(0) translateY(0);
 }
 
-.feather-2 {
+.feather2 {
   background-image: url("../images/pero2.svg");
   width: 17vw;
   height: 17vw;
-  top: 9.5vw;
-  left: 18vw;
+  top: 3vw;
+  left: 15vw;
   transform: translateX(0) translateY(0);
 }
 
-.feather-3 {
+.feather3 {
   background-image: url("../images/pero3.svg");
   width: 9vw;
   height: 9vw;
-  top: 9vw;
-  left: 37vw;
+  top: 3vw;
+  left: 32vw;
   transform: translateX(0) translateY(0);
 }
 
-.footer-text:hover ~ .feather-1 {
+.footer-text:hover .feather1 {
   transform: translateX(-10vw) translateY(-5vw);
 }
-.footer-text:hover ~ .feather-2 {
+.footer-text:hover .feather2 {
   transform: translateX(10vw) translateY(5vw);
 }
-.footer-text:hover ~ .feather-3 {
+.footer-text:hover .feather3 {
   transform: translateX(5vw) translateY(-10vw);
 }
