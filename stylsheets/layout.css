@@ -150,7 +150,7 @@ span::after {
 
 .word-people:hover::after {
   opacity: 1;
-  background-image: url("../images/word-people.png");
+  background-image: url("../images/word-roosters.svg");
 }
 
 .word-fight:hover::after {
